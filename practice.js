@@ -84,8 +84,45 @@ console.log(factorialiseNumberByRecursion(5));
 console.log(factorialiseNumberByRecursion(0));
 console.log(factorialiseNumberByRecursion(10));
 
+// ----------------------------------------
 
+function reverseString1(str){
+    return str.split('').reverse().join('');
+    // it means 3 itrations --> slow
+}
+console.log(reverseString1('javascript'));
 
+function reverseString2(str){
+    let rts = '';
+    let i = str.length;
+    while(i > 0) {
+        i--;
+        rts += str[i];
+    }
+    return rts;
+}
+console.log(reverseString2('javascript'));
+
+// not working because js strings are immutable
+function reverseString3(str){
+
+    if(str.length % 2 == 0){}
+    if(str.length % 2 == 1){
+        let temp = str[0];
+        str[0] = str[str.length-1];
+        str[str.length-1] = temp;
+    }
+
+    return str
+}
+console.log(reverseString3('javascript'));
+
+// immutable example
+let t = '0123';
+t[0] = 'r';
+console.log(t); // 0123
+
+// -------------------------------------------
 
 
 
