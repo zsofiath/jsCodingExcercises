@@ -3,6 +3,7 @@ In this repo I practice javascript with small coding exercises.
 * Introduction
 * Convert celsius to farenheit
 * Fizzbuzz
+* Factorial
 
 
 ## Ideas

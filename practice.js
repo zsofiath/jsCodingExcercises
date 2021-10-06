@@ -59,3 +59,33 @@ console.log(fizzbuzz2(4));
 console.log(fizzbuzz2(5));
 console.log(fizzbuzz2(15));
 
+// ------------------------------------
+
+function factorialiseNumber(num) {
+    let result = 1;
+    for (let index = 2; index <= num; index++) {
+        result *= index;
+    }
+    return result;
+}
+
+console.log(factorialiseNumber(3));
+console.log(factorialiseNumber(5));
+console.log(factorialiseNumber(0));
+console.log(factorialiseNumber(10));
+
+function factorialiseNumberByRecursion(num) {
+    if(num <= 1) return 1;
+    else return num * factorialiseNumberByRecursion(num-1);
+}
+
+console.log(factorialiseNumberByRecursion(3));
+console.log(factorialiseNumberByRecursion(5));
+console.log(factorialiseNumberByRecursion(0));
+console.log(factorialiseNumberByRecursion(10));
+
+
+
+
+
+
