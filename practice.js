@@ -147,3 +147,52 @@ console.log(new String("u") === new String('u')); // false
 // new does this:
 console.log({} === {}); // false
 // then fills the objects with data
+
+//------------------------------------------
+
+function getLongestWordLength(str){
+    let words = str.split(' ');
+    let longest = words[0].length;
+
+    // for (let index = 1; index < words.length; index++) {
+    //     // if(words[index].length > longest) longest = words[index].length;
+    //     longest = words[index].length > longest ? words[index].length: longest;
+    // }
+
+    words.forEach(word => {
+        longest = word.length > longest ? word.length: longest;
+    });
+
+    return longest;
+}
+
+console.log(getLongestWordLength('123 1234 123456 123'));
+
+// width sort
+function getLongestWordLength2(str){
+    return str.split(' ').sort((current, next) => next.length - current.length)[0].length;  
+}
+
+console.log(getLongestWordLength2('123 1234 123456 123'));
+
+// without splitting the string
+function getLongestWordLength3(str){
+    let i = 0;
+    let j = 0;
+    let longest = 0;
+    while( i < str.length) {
+        if(str[i] != ' ') {
+            j++;
+        } else {
+            if(longest < j) longest = j;
+            j = 0;
+        }
+        i++;
+    }
+
+    return longest;
+}
+
+console.log(getLongestWordLength3('123 1234 123456 123'));
+
+// ---------------------------------------------
