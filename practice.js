@@ -120,9 +120,30 @@ console.log(reverseString3('javascript'));
 // immutable example
 let t = '0123';
 t[0] = 'r';
+
 console.log(t); // 0123
 
 // -------------------------------------------
 
+function isPalindrome(text) {
+    // let normalText = text.split(' ').join('').split('.').join('').split(',').join('').toLowerCase(); lot of loops
+    let normalText = text.toLowerCase().replace(/[\W]/g, '');
+    let reverseText = normalText.split('').reverse().join('');
+
+    return reverseText === normalText;
+}
+
+console.log(isPalindrome('pop'));
+console.log(isPalindrome('horse'));
+console.log(isPalindrome('A man , a plan, a canal. Panama.'));
+console.log(isPalindrome('0_0(:/-\:)'));
 
 
+// string is primitive therefore its value checked and not its reference
+console.log("u" === 'u'); // true
+
+// here the string is not primitive
+console.log(new String("u") === new String('u')); // false
+// new does this:
+console.log({} === {}); // false
+// then fills the objects with data
