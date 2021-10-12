@@ -196,3 +196,9 @@ function getLongestWordLength3(str){
 console.log(getLongestWordLength3('123 1234 123456 123'));
 
 // ---------------------------------------------
+
+function titleCase(str) {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.substr(1, word.length)).join(' ');
+}
+
+console.log(titleCase("I am the hero of Azeroth"));
