@@ -11,7 +11,8 @@ In this repo I practice javascript with small coding exercises.
 * Longest word's length
 * TitleCase
 * Repeat string
-
+* Is digit
+* Get longest word
 
 
 ## Ideas

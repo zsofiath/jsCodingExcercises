@@ -233,3 +233,30 @@ console.log(repeadWordXTimesReq('o ', 10));
 console.log(repeadWordXTimesReq('o ', 3));
 console.log(repeadWordXTimesReq('o ', 1));
 console.log(repeadWordXTimesReq('o ', 2));
+
+// ---------------------------------------
+
+function isDigit(char) {
+    let digits = [0,1,2,3,4,5,6,7,8,9];
+    return digits.includes(+char);
+}
+
+console.log(isDigit(1));
+console.log(isDigit('1'));
+console.log(isDigit('t'));
+console.log(isDigit('.'));
+console.log(isDigit('.,iji'));
+
+
+function isDigit2(char) {
+    return char.length == 1 && !isNaN(char);
+}
+
+console.log(isDigit2(1));
+console.log(isDigit2('1'));
+console.log(isDigit2('14'));
+console.log(isDigit2('t'));
+console.log(isDigit2('.'));
+console.log(isDigit2('.,iji'));
+
+// ---------------------------------------
