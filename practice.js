@@ -202,3 +202,34 @@ function titleCase(str) {
 }
 
 console.log(titleCase("I am the hero of Azeroth"));
+
+// ----------------------------------------------
+
+function repeadWordXTimes(word, times) {
+    let res = '';
+    while(times > 0) {
+        times--;
+        //res+=word;
+        res = res.concat(word);
+    }
+
+    return res;
+}
+
+console.log(repeadWordXTimes('word', 4));
+
+function repeadWordXTimes2(word, times) {
+    return word.repeat(times);
+}
+
+console.log(repeadWordXTimes2('word', 4));
+
+function repeadWordXTimesReq(word, times) {
+    if(times === 1) return word;
+    return repeadWordXTimesReq(word, (Math.floor(times/2))) + repeadWordXTimesReq(word, (Math.floor(times/2) + times%2));
+}
+
+console.log(repeadWordXTimesReq('o ', 10));
+console.log(repeadWordXTimesReq('o ', 3));
+console.log(repeadWordXTimesReq('o ', 1));
+console.log(repeadWordXTimesReq('o ', 2));

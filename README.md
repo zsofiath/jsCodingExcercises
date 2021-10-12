@@ -10,6 +10,9 @@ In this repo I practice javascript with small coding exercises.
     > String is a primitive in javascript, so it can easily be compared
 * Longest word's length
 * TitleCase
+* Repeat string
+
+
 
 ## Ideas
 * Json key checker
