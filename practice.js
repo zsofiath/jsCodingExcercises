@@ -260,3 +260,37 @@ console.log(isDigit2('.'));
 console.log(isDigit2('.,iji'));
 
 // ---------------------------------------
+
+function getLongestWord(words){
+    return words.split(',').map(word => {
+        return word.replace(/[\W]/g, '')
+    }).sort((a, b) => {
+        return b.length - a.length;
+    })[0];
+}
+
+// nem a legjobb, mert a sort túl költséges művelet
+
+console.log(getLongestWord('Ready, steady, go!'));
+console.log(getLongestWord('Ready[[[, steady, go!'));
+console.log(getLongestWord('ABCd'));
+
+
+function getLongestWord2(words){
+    words = words.replace(/[\W]/g, ' ');
+    let largest ='';
+    words.split(' ').forEach(word => {
+        largest = largest.length < word.length ? word : largest;
+    });
+
+    return largest;
+}
+
+console.log(getLongestWord2('Ready, steady, go!'));
+console.log(getLongestWord2('Ready[[[, steady, go!'));
+console.log(getLongestWord2('ABCd'));
+
+// -----------------------------------
+
+
+
