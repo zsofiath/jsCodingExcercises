@@ -17,6 +17,7 @@ In this repo I practice javascript with small coding exercises.
 * Missing number
     > The javascript sort is an insertion sort
     > * It does not create new array
+* Duplicated number
 
 
 ## Ideas

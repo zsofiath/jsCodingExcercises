@@ -341,3 +341,18 @@ function getMissingNumbers(...nums) {
 
 console.log(getMissingNumbers(0,5,8,4,6,1,9,7));
 console.log(getMissingNumbers(1,2,0,7,9,3,4));
+
+// -----------------------------------------
+
+function isDuplicated(...numbers) {
+    let duplicated = false;
+    numbers.sort((a, b) => {
+        if(a-b === 0) duplicated = true;
+        return a-b;
+    });
+    return duplicated;
+}
+
+console.log(isDuplicated(1,2,3,1));
+console.log(isDuplicated(1,3));
+console.log(isDuplicated(0,4,5,0,3,6));
