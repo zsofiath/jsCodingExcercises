@@ -14,8 +14,12 @@ In this repo I practice javascript with small coding exercises.
 * Is digit
 * Get longest word
 * Time validator
+* Missing number
+    > The javascript sort is an insertion sort
+    > * It does not create new array
 
 
 ## Ideas
 * Json key checker
 * Number formatter (1000 -> 1 000)
+* Sorting methods instead of the default sort

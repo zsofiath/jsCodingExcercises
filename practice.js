@@ -302,3 +302,42 @@ console.log(isTimeValid('23:31'));
 console.log(isTimeValid('22:00'));
 console.log(isTimeValid('22:60'));
 
+// --------------------------------------
+
+// Only one number is missing
+function getMissingNumber(...nums) {
+    nums.sort((a, b) => a-b);
+    let i = 0;
+    while(i < nums.length-1 && nums[i+1]-nums[i] == 1){
+        i++;
+    }
+
+    return i+1;
+}
+
+// sort() is an insertion sort
+
+console.log(getMissingNumber(0,3,5,8,4,6,1,9,7));
+console.log(getMissingNumber(1,2,5,0,7,6,9,3,4));
+
+// more numbers might be missing
+function getMissingNumbers(...nums) {
+    missing = [];
+    nums.sort((a, b) => a-b);
+    let i = 0;
+    while(i < nums.length-1) {
+        if(nums[i+1]-nums[i] > 1) {
+            let j = nums[i];
+            while(j < nums[i+1]-1) {
+                j++;
+                missing.push(j);
+            }
+        }
+        i++;
+    }
+
+    return missing;
+}
+
+console.log(getMissingNumbers(0,5,8,4,6,1,9,7));
+console.log(getMissingNumbers(1,2,0,7,9,3,4));
