@@ -13,6 +13,7 @@ In this repo I practice javascript with small coding exercises.
 * Repeat string
 * Is digit
 * Get longest word
+* Time validator
 
 
 ## Ideas

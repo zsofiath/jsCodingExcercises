@@ -292,5 +292,13 @@ console.log(getLongestWord2('ABCd'));
 
 // -----------------------------------
 
+function isTimeValid(time) {
+    let timeArr = time.split(':');
+    return (Number(timeArr[0]) < 24) && (Number(timeArr[1]) < 60);
+}
 
+console.log(isTimeValid('24:00'));
+console.log(isTimeValid('23:31'));
+console.log(isTimeValid('22:00'));
+console.log(isTimeValid('22:60'));
 
