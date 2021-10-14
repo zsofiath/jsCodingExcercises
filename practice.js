@@ -356,3 +356,16 @@ function isDuplicated(...numbers) {
 console.log(isDuplicated(1,2,3,1));
 console.log(isDuplicated(1,3));
 console.log(isDuplicated(0,4,5,0,3,6));
+
+// ------------------------------------------
+
+function sumDigits(str) {
+    return (str.match(/\d+/g) || [])
+    .reduce((currentVal, currentIndex) => { 
+        return +currentIndex + currentVal;
+    }, 0);
+}
+
+console.log(sumDigits('2 apples, 12 oranges'));
+console.log(sumDigits('123450'));
+console.log(sumDigits('Your payment method is invalid'));
