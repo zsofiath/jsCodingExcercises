@@ -19,6 +19,7 @@ In this repo I practice javascript with small coding exercises.
     > * It does not create new array
 * Duplicated number
 * Digit sum
+* First duplicant
 
 
 ## Ideas

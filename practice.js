@@ -369,3 +369,32 @@ function sumDigits(str) {
 console.log(sumDigits('2 apples, 12 oranges'));
 console.log(sumDigits('123450'));
 console.log(sumDigits('Your payment method is invalid'));
+
+// -----------------------------------------
+
+function getFirstDuplicant(numberArray) {
+    let arr = [];
+    let i = 0;
+    while( !arr.find(el => numberArray[i] == el)  && i < numberArray.length) {
+        arr.push(numberArray[i]);
+        i++;
+    }
+    return numberArray[i] || -1;
+}
+console.log(getFirstDuplicant([2,3,3,1,5,2]));
+console.log(getFirstDuplicant([2,2]));
+console.log(getFirstDuplicant([1,2,3]));
+
+function getFirstDuplicantFaster(numberArray) {
+    let nums = {};
+
+    for (const num of numberArray) {
+        if(nums.hasOwnProperty(num)) return num;
+        nums[num]=null;
+    }
+    return -1;
+}
+console.log(getFirstDuplicantFaster([2,3,3,1,5,2]));
+console.log(getFirstDuplicantFaster([2,2]));
+console.log(getFirstDuplicantFaster([1,2,3]));
+// --------------------------------------------------
