@@ -20,6 +20,8 @@ In this repo I practice javascript with small coding exercises.
 * Duplicated number
 * Digit sum
 * First duplicant
+* Amend the sentence
+    > str.match(\regex\g) will give an array back
 
 
 ## Ideas

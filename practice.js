@@ -398,3 +398,10 @@ console.log(getFirstDuplicantFaster([2,3,3,1,5,2]));
 console.log(getFirstDuplicantFaster([2,2]));
 console.log(getFirstDuplicantFaster([1,2,3]));
 // --------------------------------------------------
+
+function amendTheSentence(string){
+    return string.match(/[A-Z][a-z']*/g).join(' ').toLowerCase();
+}
+
+console.log(amendTheSentence('CodingGodDoesWorkSon'));
+console.log(amendTheSentence("Ain'tNotFunIfTheHomieDon'tCodeNone"));
