@@ -31,7 +31,9 @@ In this repo I practice javascript with small coding exercises.
 * Unique values
 * Add up digits
 
-
+## Other excercises
+> Excercises found in other places,m collected in practice2.js
+* [Anonymous Love Letter](https://www.pramp.com/tryout)
 
 
 ## Ideas
