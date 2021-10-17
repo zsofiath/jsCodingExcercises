@@ -24,6 +24,7 @@ In this repo I practice javascript with small coding exercises.
     > str.match(\regex\g) will give an array back
 * Sum of differences
 * Unique values
+* Add up digits
 
 
 ## Ideas

@@ -452,3 +452,12 @@ function uniqueValuesOptimised(arr1, arr2) {
 console.log(uniqueValuesOptimised([1,2,3,5], [1,2,3,4,5]));
 console.log(uniqueValuesOptimised([1, 'call', 3, 'piglet'], [7, 'filly']));
 console.log(uniqueValuesOptimised([1,2,3], [3, 2, 1]));
+
+// ---------------------------------------
+
+function getDigitsSummary(num) {
+    return (''+num).split('').reduce((sum, char) => sum + +char, 0);
+}
+
+console.log(getDigitsSummary(29));
+console.log(getDigitsSummary(48));
