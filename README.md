@@ -4,7 +4,7 @@ In this repo I practice javascript with small coding exercises.
 ## Javascript 360 Course
 > Solutions of the [Javascript 360 course](https://www.udemy.com/course/javascript-360/?src=sac&kw=javascript+360)
 > in practice.js
-
+![](https://github.com/zsofiath/Certificates/blob/main/UC-1ed0b73e-42bf-4209-94d6-4b33bb4d96e0.jpg?raw=true)
 * Introduction
 * Convert celsius to farenheit
 * Fizzbuzz
