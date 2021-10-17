@@ -23,6 +23,7 @@ In this repo I practice javascript with small coding exercises.
 * Amend the sentence
     > str.match(\regex\g) will give an array back
 * Sum of differences
+* Unique values
 
 
 ## Ideas

@@ -423,13 +423,32 @@ console.log(sumOfDifferences(3,  7));
 
 // ------------------------------------
 
+function uniqueValues(arr1, arr2) {
+    let obj = {};
+    [...arr1, ...arr2].forEach(element => {
+        if(!obj.hasOwnProperty(element)) obj[element]=true;
+        else obj[element]=false;
+    });
 
+    return Object.entries(obj).filter(e => e[1]).map(e => e[0]);
+}
 
+console.log(uniqueValues([1,2,3,5], [1,2,3,4,5]));
+console.log(uniqueValues([1, 'call', 3, 'piglet'], [7, 'filly']));
+console.log(uniqueValues([1,2,3], [3, 2, 1]));
 
+function uniqueValuesOptimised(arr1, arr2) {
+    let result = [];
+    arr1.forEach(element => {
+        if(!arr2.includes(element)) result.push(element);
+    });
+    arr2.forEach(element => {
+        if(!arr1.includes(element)) result.push(element);
+    });
 
+    return result;
+}
 
-
-
-
-
-
+console.log(uniqueValuesOptimised([1,2,3,5], [1,2,3,4,5]));
+console.log(uniqueValuesOptimised([1, 'call', 3, 'piglet'], [7, 'filly']));
+console.log(uniqueValuesOptimised([1,2,3], [3, 2, 1]));
