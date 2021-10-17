@@ -22,6 +22,7 @@ In this repo I practice javascript with small coding exercises.
 * First duplicant
 * Amend the sentence
     > str.match(\regex\g) will give an array back
+* Sum of differences
 
 
 ## Ideas

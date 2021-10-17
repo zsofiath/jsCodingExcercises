@@ -405,3 +405,31 @@ function amendTheSentence(string){
 
 console.log(amendTheSentence('CodingGodDoesWorkSon'));
 console.log(amendTheSentence("Ain'tNotFunIfTheHomieDon'tCodeNone"));
+
+// ----------------------------------------------------
+
+function sumOfDifferences(...nums) {
+    const min = Math.min(...nums);
+    const max = Math.max(...nums);
+    let summary = 0;
+    for (let i = min; i <= max; i++) {
+        summary+=i;     
+    }
+    return summary;
+}
+
+console.log(sumOfDifferences(10, 5));
+console.log(sumOfDifferences(3,  7));
+
+// ------------------------------------
+
+
+
+
+
+
+
+
+
+
+
