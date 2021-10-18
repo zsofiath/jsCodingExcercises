@@ -41,3 +41,4 @@ In this repo I practice javascript with small coding exercises.
 * Json key checker
 * Number formatter (1000 -> 1 000)
 * Sorting methods instead of the default sort
+* Diffie Hellman key exchange simulator
