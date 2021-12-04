@@ -1,13 +1,15 @@
 class MyPromise {
-    thenFunction;
-    catchFunction;
+  thenFunction;
+  catchFunction;
+  finallyFunction;
   resolveFunction = (anyValue) => {
     this.thenFunction(anyValue);
+    this.finallyFunction();
   };
   rejectFunction = (value) => {
-      this.catchFunction(value)
+    this.catchFunction(value);
+    this.finallyFunction();
   };
-
 
   constructor(executor) {
     executor(this.resolveFunction, this.rejectFunction);
@@ -25,7 +27,9 @@ class MyPromise {
   then(thenFunction) {
     this.thenFunction = thenFunction;
   }
-  finally() {}
+  finally(finallyFunction) {
+    this.finallyFunction = finallyFunction;
+  }
 }
 
 // -------------------- Usage -------------------
@@ -38,16 +42,22 @@ let promise = new MyPromise((resolve, reject) => {
 promise.then((value) => {
   console.log(value);
 });
+promise.finally((value) => {
+  console.log("Finally");
+});
 
 let promise2 = new MyPromise((resolve, reject) => {
-    setTimeout(() => {
-      reject("reject");
-    }, 3000);
-  });
-  
-  promise2.then((value) => {
-    console.log(value);
-  });
-  promise2.catch((value) => {
-    console.log(value);
-  });
+  setTimeout(() => {
+    reject("reject");
+  }, 3000);
+});
+
+promise2.then((value) => {
+  console.log(value);
+});
+promise2.catch((value) => {
+  console.log(value);
+});
+promise2.finally((value) => {
+  console.log("Finally");
+});
