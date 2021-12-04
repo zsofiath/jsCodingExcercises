@@ -4,11 +4,11 @@ class MyPromise {
   finallyFunction;
   resolveFunction = (anyValue) => {
     this.thenFunction(anyValue);
-    this.finallyFunction();
+    if(this.finallyFunction) this.finallyFunction();
   };
   rejectFunction = (value) => {
     this.catchFunction(value);
-    this.finallyFunction();
+    if(this.finallyFunction) this.finallyFunction();
   };
 
   constructor(executor) {
