@@ -23,9 +23,11 @@ class MyPromise {
 
   catch(catchFunction) {
     this.catchFunction = catchFunction;
+    return new MyPromise((resolve, reject)=>{});
   }
   then(thenFunction) {
     this.thenFunction = thenFunction;
+    return new MyPromise((resolve, reject)=>{});
   }
   finally(finallyFunction) {
     this.finallyFunction = finallyFunction;
