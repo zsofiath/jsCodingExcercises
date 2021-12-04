@@ -36,6 +36,21 @@ In this repo I practice javascript with small coding exercises.
 
 * [Anonymous Love Letter](https://www.pramp.com/tryout)
 
+## Promise
+Found in promise.js.
+The purpose of this excercixse is to fully understand how a Promise works.
+### To be implemented by the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+* Constructor
+* Promise.all()
+* Promise.allSettled(iterable)
+* Promise.any(iterable)
+* Promise.race(iterable)
+* Promise.reject(reason)
+* Promise.resolve(value)
+* Promise.prototype.catch()
+* Promise.prototype.then()
+* Promise.prototype.finally()
+
 
 ## Ideas
 * Json key checker
