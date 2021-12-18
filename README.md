@@ -35,8 +35,8 @@ In this repo I practice javascript with small coding exercises.
 > Excercises found in other places, collected in practice2.js
 
 * [Anonymous Love Letter](https://www.pramp.com/tryout)
-
 * sum 5th elemnts of fibonacci
+* length of longest character sequence
 
 ## Ideas
 * Json key checker

@@ -88,3 +88,32 @@ function isPrintable(L, N) {
   console.log(sum5thsOfFibonacci2(50));
   // 8549664847
 
+function getLengthOfLongestSequence(str) {
+  let chars = {};
+  let prevChar = '';
+  let currentSequenceCount = 0;
+
+  str?.split('').forEach(char => {
+    if(!chars[char]) {
+      currentSequenceCount = 1;
+    } else {
+      if(prevChar != char) {
+        currentSequenceCount = 0;
+      }
+      currentSequenceCount++;
+    }
+
+    if(!chars[char]) chars[char] = currentSequenceCount;
+    chars[char] = currentSequenceCount > chars[char] ? currentSequenceCount : chars[char];
+    prevChar = char;
+  });
+
+  let counts = Object.values(chars);
+  return counts.length > 0 ?Math.max(...counts) : 0;
+}
+
+console.log(getLengthOfLongestSequence(''));
+console.log(getLengthOfLongestSequence());
+console.log(getLengthOfLongestSequence('vg'));
+console.log(getLengthOfLongestSequence('gg'));
+console.log(getLengthOfLongestSequence('ggooooouuooo'));
